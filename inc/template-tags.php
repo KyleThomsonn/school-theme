@@ -135,7 +135,7 @@ if ( ! function_exists( 'school_theme_post_thumbnail' ) ) :
 
 			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 				<?php
-				the_post_thumbnail('large'); 
+				the_post_thumbnail('all-news'); 
 				?>
 			</a>
 

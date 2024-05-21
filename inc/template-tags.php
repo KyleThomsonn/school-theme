@@ -128,7 +128,7 @@ if ( ! function_exists( 'school_theme_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail('large'); ?>
+				<?php the_post_thumbnail('full'); ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>

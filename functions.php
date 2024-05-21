@@ -154,13 +154,17 @@ function school_theme_scripts() {
 add_action( 'wp_enqueue_scripts', 'school_theme_scripts' );
 
 
-// Change placeholder text for Staff CPT Title
+// Change placeholder text for Staff CPT Title and the Student CPT Title
 // Code example found at wpbeginner.com
 function school_change_title_text( $title ){
 	$screen = get_current_screen();
   
 	if  ( 'school-staff' == $screen->post_type ) {
 		 $title = 'Add staff name';
+	}
+
+	if  ( 'school-student' == $screen->post_type ) {
+		 $title = 'Add student name';
 	}
   
 	return $title;

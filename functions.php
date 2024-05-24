@@ -172,6 +172,29 @@ function school_change_title_text( $title ){
   
 add_filter( 'enter_title_here', 'school_change_title_text' );
 
+// Change excerpt length on student list template
+function school_excerpt_length( $length ) {
+	if(is_post_type_archive('school-student')){
+		return 25;
+
+	} else {
+		return $length;
+	}
+}
+add_filter( 'excerpt_length', 'school_excerpt_length', 999);
+
+// Change the excerpt more on student list template
+function school_excerpt_more( $more ) {
+	if(is_post_type_archive('school-student')){
+	$more = '... <a href="'. esc_url(get_permalink()) .'">'.__('Read More About the Student').'</a>';
+		return $more;
+		
+	} else {
+		return $more;
+	}
+}
+add_filter( 'excerpt_more', 'school_excerpt_more' );
+
 /**
  * Implement the Custom Header feature.
  */

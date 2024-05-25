@@ -21,30 +21,13 @@ get_header();
 				?>
 			</header><!-- .page-header -->
 
-			<?php
-
-			$terms = get_terms( 
-				array(
-					'taxonomy' => 'school-student-category',
-				) 
-			);
-		;
-
-		if ( $terms && ! is_wp_error( $terms ) ) {
-		foreach ( $terms as $term ) {
-
+		<?php
+				
 			$args = array(
 				'post_type' => 'school-student',
 				'posts_per_page' => -1,
 				'orderby' => 'title',
-				'order' => 'ASC', 
-				'tax_query'     => array(
-					array(
-						'taxonomy' => 'school-student-category',
-						'field' => 'slug',
-						'terms' => $term->slug
-					)
-				)
+				'order' => 'ASC' 
 			);
 			$query = new WP_Query( $args );
 
@@ -60,26 +43,32 @@ get_header();
 						</a>
 						<?php the_excerpt(); ?>
 						<p>Specialty:
-						<a href="<?php echo get_term_link($term->slug, 'school-student-category');?>"><?php echo esc_html( $term->name )?></a>
+    					<?php
+    					$terms = get_the_terms(get_the_ID(), 'school-student-category');
+    						if ($terms && !is_wp_error($terms)) {
+    							foreach ($terms as $term) {
+    							    ?><a href="<?php echo get_term_link($term);?>"><?php echo esc_html($term->name);?></a>
+								<?php
+    							}
+    						}
+    					?>
 						</p>
 					</article>
-					<?php
-				}
-				wp_reset_postdata();
+							<?php
+					}
+					wp_reset_postdata();
+				};
 				echo "</section>";
-			};
-		};
-	};
-			
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
-get_footer();
+					
+				else :
+		
+					get_template_part( 'template-parts/content', 'none' );
+		
+				endif;
+				?>
+		
+			</main><!-- #main -->
+		
+		<?php
+		get_sidebar();
+		get_footer();

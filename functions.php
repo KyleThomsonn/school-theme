@@ -49,6 +49,7 @@ function school_theme_setup() {
 	// Custom Image Sizes
 
 	add_image_size('all-news', 970, 400, true );
+	add_image_size('student-size', 200, 300, true);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(

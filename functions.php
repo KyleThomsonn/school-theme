@@ -121,6 +121,13 @@ function school_theme_content_width() {
 }
 add_action( 'after_setup_theme', 'school_theme_content_width', 0 );
 
+// Add support for wide and full alignment options
+function mytheme_setup() {
+    add_theme_support( 'align-wide' );
+    add_theme_support( 'align-full' );
+}
+add_action( 'after_setup_theme', 'mytheme_setup' );
+
 /**
  * Register widget area.
  *

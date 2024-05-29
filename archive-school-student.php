@@ -32,11 +32,11 @@ get_header();
 			$query = new WP_Query( $args );
 
 			if($query->have_posts()) {
-				echo '<section>';
+				echo '<section class="students">';
 				while($query->have_posts()) {
 					$query->the_post();
 					?>
-					<article>
+					<article class="students-article">
 						<a href="<?php the_permalink(); ?>">
 							<h2><?php the_title();?></h2>
 							<?php the_post_thumbnail('medium'); ?>

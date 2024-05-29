@@ -1,4 +1,32 @@
-.custom-logo-link img{
-    height: 8rem;
-    width: auto;
+.site-footer{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin: 0;
+    background-color: #EEEEEE;
+    @media(min-width: 62.5em){
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    a{
+        text-decoration: none;
+    }
+
+    .custom-logo-link img{
+        height: 8rem;
+        width: auto;
+    }
+
+    .footer-nav{
+        text-align: center;
+        .menu-footer-menu-container{
+            ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            }
+        }
+    }
 }

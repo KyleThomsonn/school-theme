@@ -11,11 +11,13 @@
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
 			position: absolute;
-			top: 100%;
+			top: 45%;
 			left: -999em;
 			z-index: 99999;
 			background-color: #000;
-
+			@media(min-width: 37.5em){
+				top: 100%;
+			}
 			ul {
 				left: -999em;
 				top: 0;
@@ -45,7 +47,11 @@
 		li:hover > ul,
 		li.focus > ul {
 			left: auto;
-			flex-direction: column;
+			display: flex;
+			flex-direction: row;
+			@media(min-width: 37.5em){
+				flex-direction: column;
+			}
 		}
 	}
 
@@ -60,12 +66,12 @@
 
 	a {
 		display: block;
-		font-size: 0.9em;
+		font-size: 1rem;
 		text-decoration: none;
 		color: #ffffff;
 		text-transform: uppercase;
 		&:hover, &:active{
-			background-color: #305C9F;
+			color: #305C9F;
 		}
 	}
 
@@ -73,11 +79,17 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
-		background-color: #305C9F;
+		color: #305C9F;
 	}
 
 }
 
+.sub-menu li{
+width: 100px;
+@media(min-width: 37.5em){
+	width: 200px;
+}
+}
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {

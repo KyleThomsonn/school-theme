@@ -31,7 +31,7 @@ get_header();
 						<h2><?php the_title();?></h2>
 					</a>
 					<?php the_post_thumbnail('student-size');?>
-					<p><?php the_content();?></p>
+					<?php the_content();?>
 				</article>
 				<?php
 			endwhile;

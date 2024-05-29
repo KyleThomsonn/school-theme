@@ -19,3 +19,12 @@ input[type="submit"] {
 		border-color: $color__border-button-focus;
 	}
 }
+
+.wp-block-button{
+	a{
+		color: #ffffff;
+		&:hover, &:active{
+			text-decoration: underline;
+		}
+	}
+}

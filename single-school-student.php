@@ -18,10 +18,10 @@ get_header();
 
 			// get_template_part( 'template-parts/content', get_post_type() );
 			?>
-			<article>
+			<article class="single-student">
 				<h2><?php the_title()?></h2>
 				<?php the_content()?>
-				<?php the_post_thumbnail('medium')?>
+				<?php the_post_thumbnail('all-student')?>
 			</article>
 
 			<?php

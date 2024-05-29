@@ -3,6 +3,16 @@ table {
 	width: 100%;
 }
 
+	td{
+		display: flex;
+		flex-direction: column;
+		@media(min-width: 28.75em){
+			text-align: center;
+			padding: 2rem;
+			display: table-cell;
+		}
+	}
+
 tr:nth-child(even){
 	background-color: rgba(203, 194, 194, 0.803);
 }
@@ -12,9 +22,4 @@ tr:nth-child(odd){
 
 tr:hover{
 	background-color: rgba(251, 165, 165, 0.649);
-}
-
-td{
-	text-align: center;
-	padding: 2rem;
 }

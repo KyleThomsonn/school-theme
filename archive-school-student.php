@@ -39,7 +39,7 @@ get_header();
 					<article class="students-article">
 						<a href="<?php the_permalink(); ?>">
 							<h2><?php the_title();?></h2>
-							<?php the_post_thumbnail('medium'); ?>
+							<?php the_post_thumbnail('all-student'); ?>
 						</a>
 						<?php the_excerpt(); ?>
 						<p>Specialty:

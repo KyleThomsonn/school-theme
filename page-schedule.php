@@ -31,7 +31,7 @@ get_header();
 			?>
 			</div>
 
-			<section>
+			<section style="overflow-x: auto;">
 			<?php
 			if(function_exists ('get_field')){
 				if(get_field('course_schedule')){

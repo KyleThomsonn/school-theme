@@ -135,3 +135,33 @@
 	}
 }
 
+.home-blog{
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+
+	h2, p{
+		width: 100%;
+	}
+	.recent-news{
+		margin: .5px 1px;
+	}
+	article h3{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: 1;
+		width: 100%;
+		margin: 0;
+		padding: 1em;
+		font-size: 1em;
+		text-align: center;
+		background-color: rgba(255, 255, 255, 0.77);;
+	}
+	article a{
+		position: relative;
+		display: block;
+	}
+}

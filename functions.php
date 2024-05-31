@@ -163,10 +163,12 @@ function school_theme_scripts() {
 	}
 
 	// Enqueue aos scripts and styles
+	if(get_post_type() === ('post')){
 	wp_enqueue_style('aos', get_template_directory_uri() . '/aos/aos.css');
 	
 	wp_enqueue_script('aos', get_template_directory_uri() . '/aos/aos.js', array(), '6.5.3', true);
 	wp_enqueue_script('aos-init', get_template_directory_uri() . '/js/aos-init.js', array(), '6.5.3', true);
+	};
 	
 }
 add_action( 'wp_enqueue_scripts', 'school_theme_scripts' );

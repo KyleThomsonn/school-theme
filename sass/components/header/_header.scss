@@ -1,4 +1,5 @@
 .site-header{
+    font-family: "Bebas Neue", sans-serif;
     display: flex;
     justify-content: space-between;
     background-color: #000000;
@@ -8,7 +9,7 @@
         color: #ffffff;
         text-decoration: none;
         cursor: pointer;
-        font-size: 1.5rem;
+        font-size: 2rem;
         &:visited, &:hover, &:active{
             color: #ffffff;
         }

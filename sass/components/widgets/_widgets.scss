@@ -6,3 +6,16 @@
 		max-width: 100%;
 	}
 }
+
+.widget-area{
+@media(min-width: 42em){
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	}
+	a{
+		text-decoration: none;
+		color: #305C9F;
+	}
+}

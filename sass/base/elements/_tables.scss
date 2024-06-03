@@ -1,7 +1,7 @@
-table {
+.schedule {
 	margin: 0 0 1.5em;
 	width: 100%;
-}
+
 
 	td{
 		display: flex;
@@ -22,4 +22,5 @@ tr:nth-child(odd){
 
 tr:hover{
 	background-color: rgba(251, 165, 165, 0.649);
+}
 }

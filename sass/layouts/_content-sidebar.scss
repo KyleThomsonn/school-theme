@@ -1,6 +1,5 @@
 .site {
 	display: grid;
-	max-width: 2000px;
     grid-template-columns: 1fr minmax(0, 1000px) 1fr;
 	grid-template-areas:
 		"header header header"
@@ -15,7 +14,7 @@
 
 .site-main {
 	grid-area: main;
-	overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+	// overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
 }
 
 .widget-area {
